@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <span>houdunwang</span>
+  <span>hdcms.com</span>
+  <span>houdunren.com</span>
+  <script>
+    // span 换成 h4  描红 内容前加上 后端人-
+    const body = document.body
+    const reg = /<span>([\s\S]+?)<\/span>/gi
+    body.innerHTML = body.innerHTML.replace(reg, (_, s1) => {
+      return `<h4>后盾人-${s1}</h4>`
+    })
+  </script>
+</body>
+</html>

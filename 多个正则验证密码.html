@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" name="password">
+  <script>
+    document.querySelector('[name="password"]').addEventListener('keyup', (e) => {
+      const value = e.target.value
+      let regs = [
+        /^[a-z0-9]{5,10}$/i,
+        /[A-Z]/
+      ]
+      let status = regs.every(i => i.test(value))
+      // console.log(e.target.value)
+      // console.log(regs[0].test(e.target.value))
+      console.log(e.target.value, status)
+    })
+  </script>
+</body>
+</html>
